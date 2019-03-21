@@ -3,40 +3,38 @@
 
 #include "IntStack.h"
 
-class MathStack : public IntStack
-{
+class MathStack : public IntStack {
 public:
-	explicit MathStack(int s) : IntStack(s) {}
-	void add();
-	void sub();
-	void mult();
-	void div();
-	void addAll();
-	void multAll();
+    explicit MathStack(int s) : IntStack(s) {}
+    void add();
+    void sub();
+    void mult();
+    void div();
+    void addAll();
+    void multAll();
 };
 
-void MathStack::addAll(){
+void MathStack::addAll() {
     int num = 0, sum = 0;
 
-    while(!isEmpty()){
+    while (!isEmpty()) {
         pop(num);
         sum += num;
     }
     push(sum);
 }
 
-void MathStack::multAll(){
+void MathStack::multAll() {
     int num = 0, prod = 1;
 
-    while(!isEmpty()){
+    while (!isEmpty()) {
         pop(num);
         prod *= num;
     }
     push(prod);
 }
 
-void MathStack::add()
-{
+void MathStack::add() {
     int num = 0, sum = 0;
     pop(sum);
     pop(num);
@@ -44,8 +42,7 @@ void MathStack::add()
     push(sum);
 }
 
-void MathStack::sub()
-{
+void MathStack::sub() {
     int num = 0, diff = 0;
     pop(diff);
     pop(num);
@@ -66,7 +63,8 @@ void MathStack::div() {
     int num = 0, quot = 0;
     pop(quot);
     pop(num);
-    quot = quot/num;
+    quot = quot / num;
     push(quot);
 }
+
 #endif

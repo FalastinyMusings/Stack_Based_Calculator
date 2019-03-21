@@ -14,6 +14,21 @@ int main()
 	MathStack stack(STACK_SIZE);
 	MathStack addAllStack(ADD_SIZE);
 	MathStack multAllStack(MULT_SIZE);
+	MathStack testSize(5);
+
+	// Testing the isFull() function
+	testSize.push(1);
+	testSize.push(1);
+	testSize.push(1);
+	testSize.push(1);
+	testSize.push(1);
+
+	if (!testSize.isFull())
+		cout << "Not full" << endl;
+	else if (testSize.isFull())
+		cout << "Full" << endl;
+	else
+		cout << "Something broke" << endl;
 
 	// Variable to catch values as they are
 	// popped from the stack
