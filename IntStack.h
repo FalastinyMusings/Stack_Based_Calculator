@@ -9,12 +9,54 @@ protected:
 	int top;
 
 public:
-	IntStack(int);
-	~IntStack();
+	explicit IntStack(int);
+    ~IntStack();
 	void push(int);
 	void pop(int &);
 	bool isFull();
 	bool isEmpty();
 };
-	
+
+IntStack::IntStack(int size){
+    stackArray = new int[size];
+    stackSize = size;
+    top = -1;
+}
+
+IntStack::~IntStack(){
+    delete [] stackArray;
+}
+
+void IntStack::pop(int &num)
+{
+    if (isEmpty())
+    {
+        std::cout << "The stack is empty.\n";
+    }
+    else
+    {
+        num = stackArray[top];
+        top--;
+    }
+}
+
+void IntStack::push(int num){
+    top++;
+    stackArray[top] = num;
+}
+
+bool IntStack::isFull(){
+    bool stat = false;
+
+    return stat;
+}
+
+bool IntStack::isEmpty(){
+
+    if (top != -1)
+        return false;
+    else
+        return true;
+}
+
 #endif
