@@ -1,3 +1,12 @@
+/*
+Author: Hammad, Mohammad
+Assignment: Programming Assignment #03
+Course: COMP B12
+Instructor: Richard Miles
+Submitted: 2019/03/21
+*/
+
+
 #ifndef INTSTACK_H
 #define INTSTACK_H
 
