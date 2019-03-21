@@ -59,4 +59,5 @@ bool IntStack::isEmpty(){
         return true;
 }
 
+//Ignore this line
 #endif
